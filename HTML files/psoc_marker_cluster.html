@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0f04d5e5809e4349a1c062a3477f3379 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_0f04d5e5809e4349a1c062a3477f3379" ></div>
+        
+</body>
+<script>    
+    
+            var map_0f04d5e5809e4349a1c062a3477f3379 = L.map(
+                "map_0f04d5e5809e4349a1c062a3477f3379",
+                {
+                    center: [-18.9276, 48.4142],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a70dbb3398d9487cba94df04a7ead16f = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_0f04d5e5809e4349a1c062a3477f3379);
+        
+    
+            var fast_marker_cluster_ea4644d469a64478b52fa328d76b7320 = (function(){
+                
+                var callback = function (row) {
+                    var icon = L.AwesomeMarkers.icon();
+                    var marker = L.marker(new L.LatLng(row[0], row[1]));
+                    marker.setIcon(icon);
+                    return marker;
+                };
+
+                var data = [[-18.9484, 48.4256, "Psocodea"], [-22.795, 47.188, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-22.795, 47.188, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9457, 48.4196, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-21.2356, 47.3971, "Psocodea"], [-21.2356, 47.3971, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-23.4746, 47.1251, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-20.7728, 47.1826, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-21.2356, 47.3971, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-20.7728, 47.1826, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-21.264, 47.4183, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9457, 48.4196, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-21.255, 47.4178, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-22.795, 47.188, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-21.2356, 47.3971, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9457, 48.4196, "Psocodea"], [-23.4747, 47.1251, "Psocodea"], [-22.7951, 47.188, "Psocodea"], [-22.7951, 47.188, "Psocodea"], [-22.7951, 47.188, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.116667, 48.533056, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-23.0295, 47.7097, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-23.4746, 47.1251, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9457, 48.4196, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-22.795, 47.188, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-21.266667, 47.866667, "Psocodea"], [-21.266667, 47.866667, "Psocodea"], [-21.266667, 47.866667, "Psocodea"], [-21.4, 47.933333000000005, "Psocodea"], [-21.4, 47.933333000000005, "Psocodea"], [-21.266667, 47.866667, "Psocodea"], [-21.4, 47.933333000000005, "Psocodea"], [-21.266667, 47.866667, "Psocodea"], [-21.266667, 47.866667, "Psocodea"], [-21.266667, 47.866667, "Psocodea"], [-21.266667, 47.866667, "Psocodea"], [-21.266667, 47.866667, "Psocodea"], [-21.4, 47.933333000000005, "Psocodea"], [-21.4, 47.933333000000005, "Psocodea"], [-21.266667, 47.866667, "Psocodea"], [-21.266667, 47.866667, "Psocodea"], [-21.266667, 47.866667, "Psocodea"], [-21.266667, 47.866667, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-21.2356, 47.3971, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9457, 48.4196, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-21.2356, 47.3971, "Psocodea"], [-21.2356, 47.3971, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-23.5, 47.03, "Psocodea"], [-21.2356, 47.3971, "Psocodea"], [-22.7951, 47.188, "Psocodea"], [-21.266667, 47.866667, "Psocodea"], [-21.266667, 47.866667, "Psocodea"], [-21.4, 47.933333000000005, "Psocodea"], [-23.4747, 47.1251, "Psocodea"], [-20.7728, 47.1826, "Psocodea"], [-23.4747, 47.1251, "Psocodea"], [-23.0295, 47.7097, "Psocodea"], [-20.7728, 47.1826, "Psocodea"], [-23.4747, 47.1251, "Psocodea"], [-21.449163000000002, 47.076178000000006, "Psocodea"], [-21.449163000000002, 47.076178000000006, "Psocodea"], [-21.2356, 47.3971, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-22.795, 47.188, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-22.7951, 47.188, "Psocodea"], [-22.7951, 47.188, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-23.4746, 47.1251, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-22.795, 47.188, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-23.4746, 47.1251, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-12.597489999999999, 49.16305, "Psocodea"], [-22.19526, 46.88913, "Psocodea"], [-20.26586, 48.48368, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9438, 48.4316, "Psocodea"], [-18.9484, 48.4256, "Psocodea"], [-21.2356, 47.3971, "Psocodea"], [-18.9438, 48.4316, "Psocodea"]];
+                var cluster = L.markerClusterGroup({"zoom": 7});
+
+                for (var i = 0; i < data.length; i++) {
+                    var row = data[i];
+                    var marker = callback(row);
+                    marker.addTo(cluster);
+                }
+
+                cluster.addTo(map_0f04d5e5809e4349a1c062a3477f3379);
+                return cluster;
+            })();
+        
+</script>

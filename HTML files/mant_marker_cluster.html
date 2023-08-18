@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d3b70570ab664d719749e83914fd1d67 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_d3b70570ab664d719749e83914fd1d67" ></div>
+        
+</body>
+<script>    
+    
+            var map_d3b70570ab664d719749e83914fd1d67 = L.map(
+                "map_d3b70570ab664d719749e83914fd1d67",
+                {
+                    center: [-18.9276, 48.4142],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6e44c6f805ae4607ad2c8f051c848204 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_d3b70570ab664d719749e83914fd1d67);
+        
+    
+            var fast_marker_cluster_ffc7c69b4c76450a8a2d4c6375662872 = (function(){
+                
+                var callback = function (row) {
+                    var icon = L.AwesomeMarkers.icon();
+                    var marker = L.marker(new L.LatLng(row[0], row[1]));
+                    marker.setIcon(icon);
+                    return marker;
+                };
+
+                var data = [[-21.2541, 47.4219, "Mantodea"], [-18.7985, 47.4749, "Mantodea"], [-21.2541, 47.4219, "Mantodea"], [-18.7985, 47.4749, "Mantodea"], [-22.662064, 45.300270000000005, "Mantodea"], [-23.07011, 43.597064, "Mantodea"], [-22.539794, 45.382571999999996, "Mantodea"], [-18.031016, 44.495069, "Mantodea"], [-21.934028, 45.298501, "Mantodea"], [-18.7985, 47.4749, "Mantodea"], [-18.9126, 47.8926, "Mantodea"], [-18.9489, 48.2304, "Mantodea"], [-18.9484, 48.4256, "Mantodea"], [-18.9152, 47.537, "Mantodea"], [-15.090024, 47.28447, "Mantodea"], [-21.248194, 47.426916999999996, "Mantodea"], [-21.248194, 47.426916999999996, "Mantodea"], [-12.863611, 49.225833, "Mantodea"], [-21.248194, 47.426916999999996, "Mantodea"], [-12.516667, 49.183333000000005, "Mantodea"], [-13.798611, 48.161667, "Mantodea"], [-24.830833, 46.536167, "Mantodea"], [-12.258889, 49.374722, "Mantodea"], [-12.325, 49.333333, "Mantodea"], [-21.254804999999998, 47.433408, "Mantodea"], [-23.049885999999997, 43.578423, "Mantodea"], [-23.056010999999998, 43.588621999999994, "Mantodea"], [-19.142183, 44.799682000000004, "Mantodea"], [-21.580516, 47.505171000000004, "Mantodea"], [-22.085029000000002, 46.776102, "Mantodea"], [-18.953, 48.415, "Mantodea"], [-21.260178, 47.416019, "Mantodea"], [-18.9178, 47.5377, "Mantodea"], [-18.9489, 48.2304, "Mantodea"], [-18.7985, 47.4749, "Mantodea"], [-19.1694, 48.0271, "Mantodea"], [-19.2779, 48.931999999999995, "Mantodea"], [-18.9489, 48.2304, "Mantodea"], [-18.9475, 48.4182, "Mantodea"], [-18.9552, 47.8844, "Mantodea"], [-18.9126, 47.8926, "Mantodea"], [-15.711803, 49.963515, "Mantodea"], [-18.031016, 44.495069, "Mantodea"], [-15.430692, 49.838825, "Mantodea"], [-14.443043, 49.740142999999996, "Mantodea"], [-18.889761, 48.435138, "Mantodea"], [-18.965671, 48.465139, "Mantodea"], [-21.25389, 47.447973, "Mantodea"], [-12.968637, 49.136936999999996, "Mantodea"], [-18.834979999999998, 48.458738000000004, "Mantodea"], [-18.947246, 48.419119, "Mantodea"], [-21.254179999999998, 47.447903000000004, "Mantodea"], [-21.253972, 47.448005, "Mantodea"], [-14.443954000000002, 49.769985999999996, "Mantodea"], [-18.927992, 48.418389000000005, "Mantodea"], [-19.3308, 48.9782, "Mantodea"], [-18.031016, 44.495069, "Mantodea"], [-21.2649, 47.410469, "Mantodea"], [-22.564562, 45.341949, "Mantodea"], [-19.138494, 44.788921, "Mantodea"], [-21.2649, 47.410469, "Mantodea"], [-14.433724, 49.762203, "Mantodea"], [-23.049314000000003, 43.573273, "Mantodea"], [-21.261022, 47.40676, "Mantodea"], [-20.06705, 44.65724, "Mantodea"], [-18.9126, 47.8926, "Mantodea"], [-19.1694, 48.0271, "Mantodea"], [-18.9475, 48.4182, "Mantodea"], [-18.9475, 48.4182, "Mantodea"], [-18.9475, 48.4182, "Mantodea"], [-21.2649, 47.410469, "Mantodea"], [-19.1727, 48.0254, "Mantodea"], [-18.9475, 48.4182, "Mantodea"], [-18.9126, 47.8926, "Mantodea"], [-21.2335, 47.2453, "Mantodea"], [-19.1694, 48.0271, "Mantodea"], [-15.508416, 49.76742, "Mantodea"], [-18.031016, 44.495069, "Mantodea"], [-21.326477, 47.609081, "Mantodea"], [-22.645142, 45.330343, "Mantodea"], [-25.032801, 46.326933000000004, "Mantodea"], [-18.93767, 47.554596000000004, "Mantodea"], [-18.031016, 44.495069, "Mantodea"], [-16.2233, 46.941659, "Mantodea"], [-23.41496, 43.756141, "Mantodea"], [-18.7985, 47.4749, "Mantodea"], [-19.1694, 48.0271, "Mantodea"], [-18.9475, 48.4182, "Mantodea"], [-21.254138, 47.447905, "Mantodea"], [-18.9, 48.4, "Mantodea"], [-18.702, 48.467, "Mantodea"], [-23.055829, 43.612378, "Mantodea"], [-22.560308, 45.372225, "Mantodea"], [-18.933698, 48.415745, "Mantodea"], [-14.443043, 49.740142999999996, "Mantodea"], [-14.732660000000001, 49.506551, "Mantodea"], [-18.817732, 48.432968, "Mantodea"], [-18.941065, 48.422839, "Mantodea"], [-21.320635, 47.395489000000005, "Mantodea"], [-18.844739999999998, 48.435651, "Mantodea"], [-13.394804999999998, 48.341527, "Mantodea"], [-22.545585, 45.329678, "Mantodea"], [-14.990626, 47.228082, "Mantodea"], [-23.062026, 43.587210999999996, "Mantodea"], [-17.483520000000002, 49.17754, "Mantodea"], [-17.483520000000002, 49.17754, "Mantodea"], [-19.80917, 46.62222, "Mantodea"], [-19.80917, 46.62222, "Mantodea"], [-21.253987, 47.448253, "Mantodea"], [-21.226166, 47.369834999999995, "Mantodea"], [-19.178333, 49.635002, "Mantodea"], [-23.129832999999998, 47.717, "Mantodea"], [-19.178333, 49.635002, "Mantodea"], [-18.198, 47.2815, "Mantodea"], [-19.178333, 49.635002, "Mantodea"], [-21.183167, 47.436832, "Mantodea"], [-19.178333, 49.635002, "Mantodea"], [-21.183167, 47.436832, "Mantodea"], [-21.183167, 47.436832, "Mantodea"], [-21.248196, 47.426918, "Mantodea"], [-12.435555, 49.24222, "Mantodea"], [-21.250834, 47.407166, "Mantodea"], [-21.248333, 47.426666, "Mantodea"], [-19.178333, 49.635002, "Mantodea"], [-18.198, 47.2815, "Mantodea"], [-21.183167, 47.436832, "Mantodea"], [-19.178333, 49.635002, "Mantodea"], [-21.250834, 47.407166, "Mantodea"], [-19.178333, 49.635002, "Mantodea"], [-21.289998999999998, 47.333332, "Mantodea"], [-19.178333, 49.635002, "Mantodea"], [-23.021832999999997, 47.754833000000005, "Mantodea"], [-22.9134, 43.482166, "Mantodea"], [-21.183167, 47.436832, "Mantodea"], [-18.198, 47.2815, "Mantodea"], [-19.178333, 49.635002, "Mantodea"], [-18.198, 47.2815, "Mantodea"], [-24.5658, 46.9569, "Mantodea"], [-24.5658, 46.9569, "Mantodea"], [-20.793000000000003, 47.176, "Mantodea"], [-24.5658, 46.9569, "Mantodea"], [-24.5658, 46.9569, "Mantodea"], [-24.5658, 46.9569, "Mantodea"], [-24.5658, 46.9569, "Mantodea"], [-24.5658, 46.9569, "Mantodea"], [-24.5658, 46.9569, "Mantodea"], [-18.9333, 48.4167, "Mantodea"], [-24.5658, 46.9569, "Mantodea"], [-21.2528, 47.4228, "Mantodea"], [-12.499, 49.265, "Mantodea"], [-24.5658, 46.9569, "Mantodea"], [-24.5658, 46.9569, "Mantodea"], [-24.5658, 46.9569, "Mantodea"], [-12.969000000000001, 49.137, "Mantodea"], [-25.0233, 46.9767, "Mantodea"], [-25.0233, 46.9767, "Mantodea"], [-24.5658, 46.9569, "Mantodea"], [-24.5658, 46.9569, "Mantodea"], [-24.5658, 46.9569, "Mantodea"], [-12.969000000000001, 49.137, "Mantodea"], [-24.5658, 46.9569, "Mantodea"], [-24.5658, 46.9569, "Mantodea"], [-24.5658, 46.9569, "Mantodea"], [-12.499, 49.265, "Mantodea"], [-24.5658, 46.9569, "Mantodea"], [-24.5658, 46.9569, "Mantodea"], [-24.5658, 46.9569, "Mantodea"], [-24.5658, 46.9569, "Mantodea"], [-21.2528, 47.4228, "Mantodea"], [-23.061486, 43.587075, "Mantodea"], [-13.402888, 48.306746000000004, "Mantodea"], [-21.2649, 47.410469, "Mantodea"], [-21.278498000000003, 47.507694, "Mantodea"], [-18.835, 48.4587, "Mantodea"], [-18.9152, 47.537, "Mantodea"], [-19.2779, 48.931999999999995, "Mantodea"], [-14.443043, 49.740142999999996, "Mantodea"], [-13.390098000000002, 48.328976000000004, "Mantodea"], [-15.721113, 49.964577, "Mantodea"], [-21.2649, 47.410469, "Mantodea"], [-18.9557, 47.8844, "Mantodea"], [-21.244711, 47.403615, "Mantodea"], [-22.465614000000002, 45.261771, "Mantodea"], [-19.761448, 47.046816, "Mantodea"], [-21.254772, 47.433193, "Mantodea"], [-23.061472, 43.587243, "Mantodea"], [-21.258379, 47.419136, "Mantodea"], [-15.712051999999998, 49.963928, "Mantodea"], [-18.1, 49.4, "Mantodea"], [-18.1, 49.4, "Mantodea"], [-18.1, 49.4, "Mantodea"], [-18.1, 49.4, "Mantodea"], [-18.1, 49.4, "Mantodea"], [-18.1, 49.4, "Mantodea"], [-18.1, 49.4, "Mantodea"], [-15.71394, 46.31586, "Mantodea"], [-18.1, 49.4, "Mantodea"], [-15.71394, 46.31586, "Mantodea"], [-22.644696, 45.331408, "Mantodea"], [-22.539386999999998, 45.379803, "Mantodea"], [-18.889781, 48.435179999999995, "Mantodea"], [-18.9475, 48.4182, "Mantodea"]];
+                var cluster = L.markerClusterGroup({"zoom": 7});
+
+                for (var i = 0; i < data.length; i++) {
+                    var row = data[i];
+                    var marker = callback(row);
+                    marker.addTo(cluster);
+                }
+
+                cluster.addTo(map_d3b70570ab664d719749e83914fd1d67);
+                return cluster;
+            })();
+        
+</script>

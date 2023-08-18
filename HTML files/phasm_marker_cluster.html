@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_bb828240e77e4838bb4e3f4fc3de0b84 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_bb828240e77e4838bb4e3f4fc3de0b84" ></div>
+        
+</body>
+<script>    
+    
+            var map_bb828240e77e4838bb4e3f4fc3de0b84 = L.map(
+                "map_bb828240e77e4838bb4e3f4fc3de0b84",
+                {
+                    center: [-18.9276, 48.4142],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1596c30b7e9d490abf41ca1f60102c33 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_bb828240e77e4838bb4e3f4fc3de0b84);
+        
+    
+            var fast_marker_cluster_1c9443ce97a34e8bb47ed3217de76c1e = (function(){
+                
+                var callback = function (row) {
+                    var icon = L.AwesomeMarkers.icon();
+                    var marker = L.marker(new L.LatLng(row[0], row[1]));
+                    marker.setIcon(icon);
+                    return marker;
+                };
+
+                var data = [[-18.9438, 48.4316, "Phasmida"], [-22.516951000000002, 45.383865, "Phasmida"], [-21.258379, 47.419136, "Phasmida"], [-21.264060999999998, 47.419292, "Phasmida"], [-23.056459, 43.583684000000005, "Phasmida"], [-21.258379, 47.419136, "Phasmida"], [-18.935914999999998, 48.414449, "Phasmida"], [-18.882248999999998, 48.439596, "Phasmida"], [-18.930049, 48.413228000000004, "Phasmida"], [-18.859144, 48.472475, "Phasmida"], [-18.945389000000002, 48.41814, "Phasmida"], [-18.9438, 48.4316, "Phasmida"], [-20.097573999999998, 44.649514, "Phasmida"], [-22.546008999999998, 45.327888, "Phasmida"], [-18.938059, 48.417725, "Phasmida"], [-21.262634, 47.42262, "Phasmida"], [-21.258379, 47.419136, "Phasmida"], [-18.882248999999998, 48.439596, "Phasmida"], [-15.493247, 49.767764, "Phasmida"], [-21.25592, 47.407827000000005, "Phasmida"], [-18.927914, 48.415293, "Phasmida"], [-21.264060999999998, 47.419292, "Phasmida"], [-21.254639, 47.406439, "Phasmida"], [-21.289196, 47.430285, "Phasmida"], [-22.542375, 45.378278, "Phasmida"], [-21.258379, 47.419136, "Phasmida"], [-18.925529, 48.416144, "Phasmida"], [-22.6287, 45.364917, "Phasmida"], [-21.255112, 47.406687, "Phasmida"], [-21.288989, 47.429789, "Phasmida"], [-21.256358, 47.42167, "Phasmida"], [-21.261695, 47.422748, "Phasmida"], [-22.465609, 45.261612, "Phasmida"], [-20.250723, 44.419868, "Phasmida"], [-21.251829, 47.425934999999996, "Phasmida"], [-22.465614000000002, 45.261771, "Phasmida"], [-22.465614000000002, 45.261771, "Phasmida"], [-18.944496, 48.415908, "Phasmida"], [-21.258379, 47.419136, "Phasmida"], [-18.26843, 45.46352, "Phasmida"]];
+                var cluster = L.markerClusterGroup({"zoom": 7});
+
+                for (var i = 0; i < data.length; i++) {
+                    var row = data[i];
+                    var marker = callback(row);
+                    marker.addTo(cluster);
+                }
+
+                cluster.addTo(map_bb828240e77e4838bb4e3f4fc3de0b84);
+                return cluster;
+            })();
+        
+</script>
